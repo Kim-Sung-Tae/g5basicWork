@@ -1,0 +1,35 @@
+li{
+    list-style: none;
+}
+
+#hd{
+    background-color:white !important;
+
+
+    #gnb{
+        .gnb_wrap{
+
+        }
+        .gnb_menu_btn{
+           
+            left: 0;
+            position: relative;
+            top: 50%;
+            right: 0;
+            transform: translate(-50%, -50%);
+            }
+    }
+
+}
+
+.topbg{
+    background-color: beige;
+
+}
+
+
+
+.gnb_2da{
+    //  상단 소메뉴 배경 설정
+    background-color:steelblue;
+}
