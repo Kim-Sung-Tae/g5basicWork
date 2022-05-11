@@ -30,7 +30,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         include G5_BBS_PATH.'/newwin.inc.php'; // 팝업레이어
     }
     ?>
-    <nav id="gnb" class ="container color p-0">
+    <nav id="gnb" class ="container">
      
         <div class=" row topbg justify-content-between">      <!-- gnb_wrap 삭제한 구간 -->
             <ul><?php echo latest('logo','Logo',1,100 )?> </ul>
@@ -78,13 +78,13 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                             <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn d-lg-block h-100" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
             <div id="gnb_all">
                 <h2>전체메뉴</h2>
-                <ul class="gnb_al_ul">
+                <ul class="gnb_al_ul row">
                     <?php
                     
                     $i = 0;
                     foreach( $menu_datas as $row ){
                     ?>
-                    <li class="gnb_al_li">
+                    <li class="gnb_al_li col-4">
                         <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_al_a"><?php echo $row['me_name'] ?></a>
                         <?php
                         $k = 0;
