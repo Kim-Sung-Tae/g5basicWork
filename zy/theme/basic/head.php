@@ -35,7 +35,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         <div class=" row topbg justify-content-between">      <!-- gnb_wrap 삭제한 구간 -->
             <ul><?php echo latest('logo','Logo',1,100 )?> </ul>
                 
-            <ul id="gnb_1dul" class="m-auto d-none d-lg-block"> 
+            <ul id="gnb_1dul" class="m-auto d-none d-lg-block border-0"> 
                <?php
 				$menu_datas = get_menu_db(0, true);
 				$gnb_zindex = 999; // gnb_1dli z-index 값 설정용
@@ -54,7 +54,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
                         if($k == 0)
                             // 메뉴가 생성되고 반복되는 부분 
-                            echo '<span class="bg">하위분류</span><div class="gnb_2dul"><ul class="gnb_2dul_box">'.PHP_EOL;
+                            echo '<div class="gnb_2dul"><ul class="gnb_2dul_box">'.PHP_EOL;
                     ?>
                         <li class="gnb_2dli"><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da"><?php echo $row2['me_name'] ?></a></li>
                     <?php
@@ -75,7 +75,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 <?php } ?>
             </ul>
                             <!-- 햄버거 버튼 모바일에서만 -->
-                            <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn d-lg-block h-100" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
+                            <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn d-lg-none h-100" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
             <div id="gnb_all">
                 <h2>전체메뉴</h2>
                 <ul class="gnb_al_ul row">
@@ -137,7 +137,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
 <!-- 콘텐츠 시작 { -->
 <div id="wrapper">
-    <div id="container_wr">
+    <div id="container_wr w-100">
    
-    <div id="container">
+    <div id="container w-100">
         <?php if (!defined("_INDEX_")) { ?><h2 id="container_title"><span title="<?php echo get_text($g5['title']); ?>"><?php echo get_head_title($g5['title']); ?></span></h2><?php }
