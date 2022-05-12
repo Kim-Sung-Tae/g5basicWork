@@ -54,10 +54,14 @@ $shop_css = '';
 if (defined('_SHOP_')) $shop_css = '_shop';
 echo '<link rel="stylesheet" href="'.run_replace('head_css_url', G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').$shop_css.'.css?ver='.G5_CSS_VER, G5_THEME_URL).'">'.PHP_EOL;
 ?>
+
+
+<!-- 스와이퍼 min.css  삽입  -  kst -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 <!-- 부트스트랩 4.6 cdn  삽입  - kst   -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 <!--   작업자  kst.css 삽입  테마안의 basic 이 아닌 기본그누보드 css에 스타일시트 만들어서 다른 테마에도 사용가능하게 제작 -->
-<link rel="stylesheet" href="<?php echo G5_CSS_URL ?>/kst.min.css">
+<link rel="stylesheet" href="<?php echo G5_CSS_URL ?>/kst.min.css?ver=<?php echo time(); ?>">
 
 <!--[if lte IE 8]>
 <script src="<?php echo G5_JS_URL ?>/html5.js"></script>
@@ -81,11 +85,17 @@ var g5_shop_url = "<?php echo G5_SHOP_URL; ?>";
 var g5_admin_url = "<?php echo G5_ADMIN_URL; ?>";
 <?php } ?>
 </script>
-<!-- 임시로 멈춰놓음 - 부트스트랩 carousel , 작동하게 하려면 주석 해제하기. -->
+<!-- 임시로 멈춰놓을경우 주석 처리- 부트스트랩 carousel , swiper  작동하게 하려면 주석 해제하기. -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
+
+
+<?php add_javascript('<script src="'.G5_JS_URL.'/swiper/swiper.min.js"></script>', 0) ?>
 <?php
+
+
 add_javascript('<script src="'.G5_JS_URL.'/jquery-1.12.4.min.js"></script>', 0);
 add_javascript('<script src="'.G5_JS_URL.'/jquery-migrate-1.4.1.min.js"></script>', 0);
 if (defined('_SHOP_')) {

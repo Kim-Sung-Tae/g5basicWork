@@ -12,19 +12,34 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  <?php
+        for ($x=0; $x<$list_count; $x++) {
+       
+    ?>
+    <li data-target="#carouselExampleIndicators" data-slide-to=<?php echo $x; ?> class="active"></li>
+   
+    <?php }  ?>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <!-- <img src="..." class="d-block w-100" alt="123"> -->
-    
-    </div>
-    <div class="carousel-item">
-      <!-- <img src="..." class="d-block w-100" alt="456"> -->
-  
-    </div>
+    <?php
+          for ($i=0; $i<$list_count; $i++) {
+
+            $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
+
+            if($thumb['src']) {
+                $img = $thumb['ori'];
+            } else {
+                $img = G5_IMG_URL.'/no_img.png';
+                $thumb['alt'] = '이미지가 없습니다.';
+            }
+            $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="img-fluid" >';
+            $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
+        
+      ?> 
+      <div class="carousel-item <?php if($i === 0) echo 'active'; ?>">
+          <?php echo    $img_content; ?>
+      </div>
+      <?php }  ?>
   
   </div>
   <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
@@ -39,30 +54,4 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
 
 
 
-<div class="pic_lt">
-    <!-- < 게시판 이름> h2 class="lat_title"><a href="<?php echo get_pretty_url($bo_table); ?>"><?php echo $bo_subject ?></a></h2> -->
-    <ul>
-    <?php
-    for ($i=0; $i<$list_count; $i++) {
-    $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
 
-    if($thumb['src']) {
-        $img = $thumb['src'];
-    } else {
-        $img = G5_IMG_URL.'/no_img.png';
-        $thumb['alt'] = '이미지가 없습니다.';
-    }
-    $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="img-fluid" >';
-    $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
-    ?>
-      
-            <span class="lt_img"><?php echo run_replace('thumb_image_tag', $img_content, $thumb);?></span>
-       
-    <?php }  ?>
-    <?php if ($list_count == 0) { //게시물이 없을 때  ?>
-    <li class="empty_li">게시물이 없습니다.</li>
-    <?php }  ?>
-    </ul>
-    
-
-</div>
