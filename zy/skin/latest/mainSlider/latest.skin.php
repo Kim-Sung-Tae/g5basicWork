@@ -29,17 +29,11 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         <div class="swiper-slide"> 
             <div class ="slide_wrap">
                 <div class="position-realtive w-100">
-                    <div class ="row m-0 justify-content-center">
-                        <div class ="col-12 p-0">
+                    <div class ="row justify-content-center">
+                        <div class ="col-12">
                              <?php echo $img_content; ?>
                         </div>  
-                        <div class="position-absolute p-1 m-2 category_open">
-                           <p><?php echo $list[$i]['ca_name']?> </p>
-                        </div>
-                        <div class ="w-100">
-                            <p><?php echo $list[$i]['subject']; ?></p>
-                            <p><?php echo $list[$i]['wr_content']; ?></p>
-                        </div>
+
                     </div>
                 </div>  
             </div>

@@ -1,19 +1,13 @@
 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 40,
-        },
-      },
+
+
+$(document).ready(function(){
+  $(window).scroll(function(){
+    if( $(window).scrollTop() > 0 ){
+     $('#hd').addClass('colorGreen');
+    }else{
+     $('#hd').removeClass('colorGreen');
+    }
   });
+})
+

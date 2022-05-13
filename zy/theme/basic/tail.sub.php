@@ -21,9 +21,9 @@ $(function() {
 <![endif]-->
 
 
-<script src="<?php echo G5_JS_URL?>/kstJS/kst.js" defer></script>
+<script src="<?php echo G5_JS_URL?>/kstJS/kst.js?var=<?php echo time(); ?>" defer></script>
 
-<?php run_event('tail_sub'); ?>
+<?php //run_event('tail_sub'); ?>
 
 </body>
 </html>

@@ -6,11 +6,7 @@ if (G5_IS_MOBILE) {
     return;
 }
 
-if(G5_COMMUNITY_USE === false) {
-    define('G5_IS_COMMUNITY_PAGE', true);
-    include_once(G5_THEME_SHOP_PATH.'/shop.head.php');
-    return;
-}
+
 include_once(G5_THEME_PATH.'/head.sub.php');
 include_once(G5_LIB_PATH.'/latest.lib.php');
 include_once(G5_LIB_PATH.'/outlogin.lib.php');
@@ -21,7 +17,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 ?>
 
 <!-- 상단 시작 { -->
-<div id="hd" >
+<div id="hd" class="position-fixed left-0 w-100 top-0" >
     <h1 id="hd_h1"><?php echo $g5['title'] ?></h1>
     <div id="skip_to_container"><a href="#container">본문 바로가기</a></div>
 
@@ -30,12 +26,16 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         include G5_BBS_PATH.'/newwin.inc.php'; // 팝업레이어
     }
     ?>
-    <nav id="gnb" class ="container">
+    <nav id="gnb" class ="container py-1 py-lg-3">
      
-        <div class=" row topbg justify-content-between">      <!-- gnb_wrap 삭제한 구간 -->
-            <ul><?php echo latest('logo','Logo',1,100 )?> </ul>
+        <div class="row justify-content-between align-items-center">      <!-- gnb_wrap 삭제한 구간 -->
+
+
+            <!-- 로고 최근 게시글로 삽입 -->
+            
+            <h1 class='mb-0'><?php echo latest('logo','Logo',1,100 )?></h1>
                 
-            <ul id="gnb_1dul" class="m-auto d-none d-lg-block border-0"> 
+            <ul id="gnb_1dul" class="d-none d-lg-block border-0 mb-0"> 
                <?php
 				$menu_datas = get_menu_db(0, true);
 				$gnb_zindex = 999; // gnb_1dli z-index 값 설정용
@@ -73,10 +73,11 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 if ($i == 0) {  ?>
                     <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
                 <?php } ?>
-            </ul>
+           
                             <!-- 햄버거 버튼 모바일에서만 -->
                             <li class="gnb_1dli gnb_mnal"><button type="button" class="gnb_menu_btn d-lg-none h-100" title="전체메뉴"><i class="fa fa-bars" aria-hidden="true"></i><span class="sound_only">전체메뉴열기</span></button></li>
-            <div id="gnb_all">
+              </ul>
+                            <div id="gnb_all">
                 <h2>전체메뉴</h2>
                 <ul class="gnb_al_ul row">
                     <?php

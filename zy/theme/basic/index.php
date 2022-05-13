@@ -7,27 +7,24 @@ if (G5_IS_MOBILE) {
     return;
 }
 
-if(G5_COMMUNITY_USE === false) {
-    include_once(G5_THEME_SHOP_PATH.'/index.php');
-    return;
-}
-
 include_once(G5_THEME_PATH.'/head.php');
 ?>
 
 <!-- 첫번쨰 섹션 슬라이드  캐러셀 가져오는 부분  -->
-
-    <?php  echo latest('carousel', 'carousel', 3, 200);?>
-
+<div class="mainSlider">
+    <?php  echo latest('mainSlider', 'carousel', 3, 200);?>
+</div>
 
     <!-- 가게 소개  -->
-    <div class ="open_intro">
+    <div class="open_intro container-lg">
         <?php  echo latest('open_intro', 'open_intro', 10, 200);?>
     </div>
 
+<!-- pic_block 의 ul 이 가로 스크롤을 만듦 유의 -->
+
     <div class ="main_notice">
-        <?php  echo latest('pic_block', 'main_notice', 4, 200);?>
-        <?php  echo latest('pic_block', 'main_event', 4, 200);?>
+        <?php  echo latest(' ', 'main_notice', 4, 200);?>
+        <?php  echo latest(' ', 'main_event', 4, 200);?>
     </div>
 
 
@@ -39,13 +36,13 @@ include_once(G5_THEME_PATH.'/head.php');
     </div>
 
     <div class = "main_youtube2">
-    <?php  echo latest('pic_block', 'main_youtube2', 4, 200);?>
+         <?php  echo latest('', 'main_youtube2', 4, 200);?>
     </div>
 
 
     
 
-
+   <script src="/zy/js/kstJS/main.js"></script>
 
 
 
