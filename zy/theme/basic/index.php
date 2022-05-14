@@ -16,15 +16,15 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
     <!-- 가게 소개  -->
-    <div class="open_intro container-lg">
+    <div class="open_intro container-lg position-relative">
         <?php  echo latest('open_intro', 'open_intro', 10, 200);?>
     </div>
 
 <!-- pic_block 의 ul 이 가로 스크롤을 만듦 유의 -->
 
     <div class ="main_notice">
-        <?php  echo latest(' ', 'main_notice', 4, 200);?>
-        <?php  echo latest(' ', 'main_event', 4, 200);?>
+        <?php  echo latest('main_notice', 'main_notice', 4, 200);?>
+        <?php  echo latest('', 'main_event', 4, 200);?>
     </div>
 
 

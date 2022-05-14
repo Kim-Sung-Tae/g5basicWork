@@ -25,30 +25,21 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
             $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="img-fluid" >';
             $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     
-      ?> 
-        <div class="swiper-slide"> 
-            <div class ="slide_wrap">
-                <div class="position-realtive w-100 open_hover">
-                    <div class ="row m-0 justify-content-center">
-                        <div class ="col-12 p-0 open_img">
+      ?>               
+      
                              <?php echo $img_content; ?>
-                        </div>  
-                        <div class="position-absolute p-1 m-2 category_open">
+    
                            <p><?php echo $list[$i]['ca_name']?> </p>
-                        </div>
-                        <div class ="w-100">
-                            <h2 class="subject_open"><img src="<?php echo G5_IMG_URL; ?>/open_icon1.png " alt="no image"> <?php echo $list[$i]['subject']; ?></h2>
-                            <p><img src="<?php echo G5_IMG_URL; ?>/open_icon2.png " alt="no image"><?php echo $list[$i]['wr_content']; ?></p>
-                            <p><img src="<?php echo G5_IMG_URL; ?>/open_icon3.png " alt="no image"><?php echo $list[$i]['wr_link1']; ?></p>
-                        </div>
-                        <div class ="position-absolute open_hover_visible">
+
+                         <?php echo $list[$i]['subject']; ?>
+                          <?php echo $list[$i]['wr_content']; ?>
+                           <?php echo $list[$i]['wr_link1']; ?>
+                     
+                       
                               <?php echo $list[$i]['subject']; ?>
-                        </div>
+                      
                         
-                    </div>
-                </div>  
-            </div>
-        </div>
+          
 
       <?php }  ?>
       </div>

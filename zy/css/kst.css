@@ -261,11 +261,33 @@ p {
   margin: unset;
 }
 
+.open_hover .open_hover_visible {
+  opacity: 0;
+  top: 30%;
+  font-family: "GSB";
+  color: #20a567;
+  font-size: 2rem;
+}
+
+.open_hover:hover .open_img, .open_hover:hover .category_open, .open_hover:hover .subject_open {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.open_hover:hover .open_hover_visible {
+  opacity: 1;
+}
+
 .category_open {
   left: 0;
   top: 0;
   color: white;
   background: #19875490;
+}
+
+.subject_open {
+  color: #198775;
+  font-family: 'GSB';
 }
 
 .topbg {
@@ -283,3 +305,4 @@ p {
   line-height: unset;
   overflow: visible !important;
 }
+/*# sourceMappingURL=kst.css.map */
