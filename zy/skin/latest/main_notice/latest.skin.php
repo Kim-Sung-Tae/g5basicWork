@@ -9,8 +9,8 @@ $thumb_height = 360;
 $list_count = (is_array($list) && $list) ? count($list) : 0;
 ?>
 
-    <div class="swiper mySwiper" >
-      <div class="swiper-wrapper">
+    <div class ="notice_event_wrapper">
+        <h2>게시판 제목 </h2>
       <?php
           for ($i=0; $i<$list_count; $i++) {
 
@@ -25,32 +25,33 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
             $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="img-fluid" >';
             $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     
-      ?>               
-      
-                             <?php echo $img_content; ?>
-    
-                           <p><?php echo $list[$i]['ca_name']?> </p>
+      ?>            
 
-                         <?php echo $list[$i]['subject']; ?>
-                          <?php echo $list[$i]['wr_content']; ?>
-                           <?php echo $list[$i]['wr_link1']; ?>
-                     
-                       
-                              <?php echo $list[$i]['subject']; ?>
-                      
-                        
-          
-
+        <div>
+            <div class ="ne_textbox">
+                <div class ="ne_left_text">
+                    <p> <?php echo $list[$i]['wr_id']?> </p>
+                    <p> <?php echo $list[$i]['wr_datetime']?></p>
+                </div>
+                <div class ="ne_right_text">
+                    <p><?php echo $list[$i]['subject']; ?></p>
+                    <p> <?php echo $list[$i]['wr_content']; ?></p>
+                </div>
+            </div>
+            <div class="ne_img">
+                    하버 되는 이미지 
+                    <?php echo $img_content; ?>
+            </div>
+        </div>
+    </div>    
+                            
       <?php }  ?>
       </div>
 
  
     </div>
             
-    <div class="Swiper_button_box">
-            <div class="swiper-button-next"></div>
-           <div class="swiper-button-prev"></div>
-    </div>
+
       
 
 
