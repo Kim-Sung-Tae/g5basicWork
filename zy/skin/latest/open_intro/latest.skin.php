@@ -29,7 +29,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         <div class="swiper-slide"> 
             <div class ="slide_wrap">
                 <div class="position-realtive w-100 open_hover">
-                    <div class ="row m-0 justify-content-center">
+                    <div class ="row m-0 justify-content-center border">
                         <div class ="col-12 p-0 open_img">
                              <?php echo $img_content; ?>
                         </div>  

@@ -8,11 +8,9 @@ $thumb_width = 360;
 $thumb_height = 360;
 $list_count = (is_array($list) && $list) ? count($list) : 0;
 ?>
-
     <div class ="notice_event_wrapper">
       <?php
           for ($i=0; $i<$list_count; $i++) {
-
             $thumb = get_list_thumbnail($bo_table, $list[$i]['wr_id'], $thumb_width, $thumb_height, false, true);
 
             if($thumb['src']) {
@@ -23,26 +21,11 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
             }
             $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="img-fluid" >';
             $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
-    
       ?>            
-        <div class ="container-lg">
-            <div class ="position-relative row">
-                <div class ="ne_textbox col-12 col-md-6 d-flex">
-                    <div class ="ne_left_text col-3">
-                        <p > <?php echo $i+1?> </p>
-                        <p> <?php echo $list[$i]['wr_datetime']?></p>
-                    </div>
-                    <div class ="ne_right_text col-9">
-                        <p><?php echo $list[$i]['subject']; ?></p>
-                        <p> <?php echo $list[$i]['wr_content']; ?></p>
-                    </div>
-                </div>
-            </div>
-            <div class="intro_img col-12 col-md-6 d-none d-md-block"> 
+            <div class="ne_img">
                     <?php echo $img_content; ?>
-                </div>
-            </div>               
-      <?php }  ?> 
+            </div>           
+      <?php }  ?>
     <?php if ($list_count == 0) { //게시물이 없을 때  ?>
         <p class="empty_li">게시물이 없습니다.</p>
     <?php }  ?>

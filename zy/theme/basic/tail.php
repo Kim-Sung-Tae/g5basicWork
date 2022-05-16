@@ -20,34 +20,26 @@ if (G5_IS_MOBILE) {
 
 <!-- 하단 시작 { -->
 <div id="ft">
-
-    <div id="ft_wr">
-        <div id="ft_link" class="ft_cnt">
-            <a href="<?php echo get_pretty_url('content', 'company'); ?>">회사소개</a>
-            <a href="<?php echo get_pretty_url('content', 'privacy'); ?>">개인정보처리방침</a>
-            <a href="<?php echo get_pretty_url('content', 'provision'); ?>">서비스이용약관</a>
-            <a href="<?php echo get_device_change_url(); ?>">모바일버전</a>
+        <div class ="footerwrap container-lg">
+            
+             <div class ="footer_content row d-flex justify-content-center align-items-center">
+                <div class ="footer_left col-12 col-md-6">
+                    <div class ="footer_info mb-5">
+                        <h3 class ="text-left mb-5">INFORMATION</h3>
+                        <?php echo latest('footer_info','footer_info',4,200);?>
+                    </div>
+                    <div class ="footer_sns mb-5">
+                        <?php echo latest('footer_sns','footer_sns',4,200);?>
+                    </div>
+                </div>
+                <div class ="footer_right col-12 col-md-6">
+                    <?php echo latest('footer_map','footer_map',4,200);?>
+                </div>
+            </div>
         </div>
-        <div id="ft_company" class="ft_cnt">
-        	<h2 class='sr-only'>사이트 정보</h2>
-	        <p class="ft_info">
-                반드시 최근게시로 처리해줄것//////////////
-	        	회사명 : 회사명 / 대표 : 대표자명<br>
-				주소  : OO도 OO시 OO구 OO동 123-45<br>
-				사업자 등록번호  : 123-45-67890<br>
-				전화 :  02-123-4567  팩스  : 02-123-4568<br>
-				통신판매업신고번호 :  제 OO구 - 123호<br>
-				개인정보관리책임자 :  정보책임자명<br>
-			</p>
-	    </div>
-       
-        
-	
-	</div>      
-        <!-- <div id="ft_catch"><img src="<?php echo G5_IMG_URL; ?>/ft_logo.png" alt="<?php echo G5_VERSION ?>"></div> -->
-        <div id="ft_copy">Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.</div>
-    
-    
+
+
+
     <button type="button" id="top_btn">
     	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
     </button>
