@@ -36,7 +36,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                         <div class="position-absolute p-1 m-2 category_open">
                            <p><?php echo $list[$i]['ca_name']?> </p>
                         </div>
-                        <div class ="w-100">
+                        <div class ="w-100 p-2">
                             <h2 class="subject_open"><img src="<?php echo G5_IMG_URL; ?>/open_icon1.png " alt="no image"> <?php echo $list[$i]['subject']; ?></h2>
                             <p><img src="<?php echo G5_IMG_URL; ?>/open_icon2.png " alt="no image"><?php echo $list[$i]['wr_content']; ?></p>
                             <p><img src="<?php echo G5_IMG_URL; ?>/open_icon3.png " alt="no image"><?php echo $list[$i]['wr_link1']; ?></p>

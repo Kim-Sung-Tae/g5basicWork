@@ -22,10 +22,32 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <!-- pic_block 의 ul 이 가로 스크롤을 만듦 유의 -->
 
-    <div class ="main_notice">
-        <?php  echo latest('main_notice', 'main_notice', 4, 200);?>
-        <?php  echo latest('','main_event', 4, 200);?>
-    </div>
+<!-- swiper 처리 indicate -->
+
+<div class ="container-lg position-relative">
+         <div class ="row main_notice_event">
+            <div class="swiper mySwiper">
+                <div class="swiper-pagination tabstitle"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">  
+                        <div class ="main_notice">
+                            <?php  echo latest('main_notice', 'main_notice', 4, 200);?>   
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class ="main_notice">
+                        <?php  echo latest('main_notice', 'main_event', 4, 200);?>  
+                         </div>
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+           
+         </div>
+</div>
 
 
     <div class="movie">

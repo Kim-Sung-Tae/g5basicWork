@@ -485,3 +485,9 @@ box-sizing:content-box;
 
 
 /* open_intro 폰트 설정 */
+
+
+
+.notice_textbox{
+  font-family: "GSM";
+}

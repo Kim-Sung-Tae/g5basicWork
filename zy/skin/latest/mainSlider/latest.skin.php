@@ -33,11 +33,11 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                         <div class ="col-12">
                              <?php echo $img_content; ?>
                         </div>  
-
                     </div>
                 </div>  
             </div>
         </div>
+        
 
       <?php }  ?>
       </div>

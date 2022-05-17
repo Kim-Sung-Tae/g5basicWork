@@ -17,6 +17,8 @@ var swiper = new Swiper(".open_intro .mySwiper", {
       },
   });
 
+  //   main sledier 용
+
   var swipermain = new Swiper(".mainSlider .mySwiper", {
     slidesPerView: 1,
     spaceBetween: 0,
@@ -26,3 +28,26 @@ var swiper = new Swiper(".open_intro .mySwiper", {
     },
    
   });
+
+ // main_notice / main_event   indicate 로 활용 
+
+
+var swipermain2 = new Swiper(".main_notice_event .mySwiper", {
+  spaceBetween: 30,
+  pagination: {
+    el: ".main_notice_event .swiper-pagination",
+    clickable: true,
+    observer: true, 
+    observeParents: true,
+  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
+
+  renderBullet: function (index, className) {
+    return '<span class="' + className + '">' + (index + 1) + "</span>";
+  },
+});
+
+
