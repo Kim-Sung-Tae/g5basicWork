@@ -27,16 +27,16 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
       ?> 
          <li class='notice_textbox<?php echo $i ?>  notice_textbox'>     
                 <div class="col-md-6 col-12 d-flex p-4 notice_textbox10">
-                    <div class ="notice_left_text col-3 ">
+                    <div class ="notice_left_text col-3">
                         <p class ="text-center notice_wr"> 0<?php echo $i+1?> </p>
                         <p> <?php echo $list[$i]['datetime']?></p>
                     </div>
                     <div class ="notice_right_text col-9">
-                        <p><?php echo $list[$i]['subject']; ?></p>
-                        <p><?php echo $list[$i]['content']; ?></p>
+                        <p class ="text-cut"><?php echo $list[$i]['subject']; ?></p>
+                        <div><?php echo utf8_strcut(strip_tags($list[$i]['wr_content']), 35, '...'); ?></div>
                     </div>
                 </div>
-                <div class="notice_img  position-absolute "> 
+                <div class="notice_img  position-absolute d-none d-lg-block"> 
                         <?php echo $img_content; ?>
                 </div>
          </li>

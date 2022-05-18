@@ -307,7 +307,7 @@ p {
                    overflow: visible !important;
                 }
 
-div>p{
+.text-cut{
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   white-space: normal;
@@ -317,7 +317,26 @@ div>p{
   -webkit-line-clamp: 1;
   overflow: hidden;
 }
-               
+
+
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+  right:-30px;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+  left:-30px;
+}
+
+:root{
+  --swiper-navigation-size: 33px;
+  --swiper-theme-color:#20c997;
+}
+
+@media(max-width:768px){
+  .subject_open{
+     font-size:1rem;
+    }
+}
 
 #ft{
   background-color: #37454b;
@@ -349,4 +368,21 @@ div>p{
 .notice_right_text,.notice_wr{
   font-size:1.2rm
 }
+.tabstitle.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
+  font-size: xx-large;
+}
+.swiper-pagination-bullet{
+  width: 125px;
+  background-color: transparent;
+  transition: 0.5s;
+}
 
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: #4a9f9f;
+    position: relative;
+    height: 1px;
+  
+}
+.swiper-slide.slide-bg{
+  background: white;
+}

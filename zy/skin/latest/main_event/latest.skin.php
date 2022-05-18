@@ -33,10 +33,10 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                     </div>
                     <div class ="notice_right_text col-9">
                         <p><?php echo $list[$i]['subject']; ?></p>
-                        <p><?php echo $list[$i]['content']; ?></p>
+                        <div><?php echo utf8_strcut(strip_tags($list[$i]['wr_content']), 35, '...'); ?></div>
                     </div>
                 </div>
-                <div class="notice_img  position-absolute "> 
+                <div class="notice_img  position-absolute d-none d-lg-block"> 
                         <?php echo $img_content; ?>
                 </div>
          </li>

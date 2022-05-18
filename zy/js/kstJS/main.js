@@ -32,22 +32,32 @@ var swiper = new Swiper(".open_intro .mySwiper", {
  // main_notice / main_event   indicate 로 활용 
 
 
-var swipermain2 = new Swiper(".main_notice_event .mySwiper", {
+var swipermain2 = new Swiper(".main_notice_event .mySwiper",{
+
   spaceBetween: 30,
+  effect:"fade",
   pagination: {
-    el: ".main_notice_event .swiper-pagination",
+    el: ".main_notice_event .tabstitle",
     clickable: true,
     observer: true, 
     observeParents: true,
+    renderBullet: function (i, className) {
+
+      var names = [];
+      $(".main_notice_event .swiper-wrapper .swiper-slide").each(function (i) {
+                names.push($(this).data("name"));
+      });
+
+     
+      return '<span class="' + className + '">' + names[i] + "  </span>";
+    },
   },
   // autoplay: {
   //   delay: 5000,
   //   disableOnInteraction: false,
   // },
 
-  renderBullet: function (index, className) {
-    return '<span class="' + className + '">' + (index + 1) + "</span>";
-  },
+
 });
 
 

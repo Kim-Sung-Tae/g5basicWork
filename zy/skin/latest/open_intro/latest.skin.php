@@ -38,8 +38,8 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                         </div>
                         <div class ="w-100 p-2">
                             <h2 class="subject_open"><img src="<?php echo G5_IMG_URL; ?>/open_icon1.png " alt="no image"> <?php echo $list[$i]['subject']; ?></h2>
-                            <p><img src="<?php echo G5_IMG_URL; ?>/open_icon2.png " alt="no image"><?php echo $list[$i]['wr_content']; ?></p>
-                            <p><img src="<?php echo G5_IMG_URL; ?>/open_icon3.png " alt="no image"><?php echo $list[$i]['wr_link1']; ?></p>
+                            <p class ="mb-1"><img src="<?php echo G5_IMG_URL; ?>/open_icon2.png " alt="no image"><?php echo $list[$i]['wr_content']; ?></p>
+                            <p class ="text-cut"><img src="<?php echo G5_IMG_URL; ?>/open_icon3.png " alt="no image"><?php echo $list[$i]['wr_link1']; ?></p>
                         </div>
                         <div class ="position-absolute open_hover_visible">
                               <?php echo $list[$i]['subject']; ?>
@@ -57,8 +57,8 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     </div>
             
     <div class="Swiper_button_box">
-            <div class="swiper-button-next"></div>
-           <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next intro_next"></div>
+           <div class="swiper-button-prev intro_pre"></div>
     </div>
       
 

@@ -11,7 +11,7 @@ include_once(G5_THEME_PATH.'/head.php');
 ?>
 
 <!-- 첫번쨰 섹션 슬라이드  캐러셀 가져오는 부분  -->
-<div class="mainSlider">
+<div class="mainSlider  ">
     <?php  echo latest('mainSlider', 'carousel', 3, 200);?>
 </div>
 
@@ -24,47 +24,41 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <!-- swiper 처리 indicate -->
 
-<div class ="container-lg position-relative">
+<div class ="container-lg position-relative mb-5">
          <div class ="row main_notice_event">
             <div class="swiper mySwiper">
-                <div class="swiper-pagination tabstitle"></div>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">  
+                <div class="tabstitle px-5"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span></div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide slide-bg" data-name="Notice">  
                         <div class ="main_notice">
                             <?php  echo latest('main_notice', 'main_notice', 4, 200);?>   
                         </div>
                     </div>
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide slide-bg" data-name="Event">
                         <div class ="main_notice">
-                        <?php  echo latest('main_notice', 'main_event', 4, 200);?>  
-                         </div>
-                    </div>
-                    
-                    
-                </div>
-                
+                            <?php  echo latest('main_event', 'main_event', 4, 200);?>  
+                        </div>
+                    </div> 
+                </div>            
             </div>
-           
-         </div>
+        </div>
 </div>
 
 
     <div class="movie">
-    <h2 class="sound_only">유트브 22년 광고영상</h2>
-        <?php
-        echo latest('youtube', 'main_youtube', 1, 23);		// 최소설치시 자동생성되는 갤러리게시판
-        ?>
+        <h2 class="sound_only">유트브 22년 광고영상</h2>
+            <?php
+                echo latest('youtube', 'main_youtube', 2, 50);		// 최소설치시 자동생성되는 갤러리게시판
+            ?>
     </div>
 
-    <div class = "main_youtube2">
-         <?php  echo latest('', 'main_youtube2', 4, 200);?>
-    </div>
+    
 
 
     
 
-   <script src="/zy/js/kstJS/main.js"></script>
+   <script src="/zy/js/kstJS/main.js?ver=<?php echo time(); ?>"></script>
 
 
 

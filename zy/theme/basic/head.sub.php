@@ -37,16 +37,22 @@ header("Pragma: no-cache"); // HTTP/1.0
 <head>
 <meta charset="utf-8">
 <meta name="viewport" id="meta_viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
-<meta name="HandheldFriendly" content="true">
+
 <meta name="format-detection" content="telephone=no">
 <meta http-equiv="imagetoolbar" content="no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name = "description" content ="그누보드로 베이스로 리안헤어 페이지 카피작업본으로 공부용으로 만든 페이지 입니다.">
+<meta name = "keywords" content ="김성태의 리안헤어 작업본"> 
 
+<!-- 관리자 모드에서 수정가능한 meta  -->
 <?php
 if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
 ?>
-<title><?php echo $g5_head_title; ?></title>
+    <!-- 관리자 모드에서 변경 가능한 title -->
+    <title><?php echo $g5_head_title; ?></title>
+        <!-- 파비콘 삽입  sunflower 무료 이미지 -->
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo G5_IMG_URL ?>/sunflower.ico" />
 
 <link rel="stylesheet" href="<?php echo  G5_THEME_CSS_URL?>/default.css?ver=<?php echo time();?>">
 
@@ -55,7 +61,7 @@ if($config['cf_add_meta'])
 <!-- 부트스트랩 4.6 cdn  삽입  - kst   -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 <!--   작업자  kst.css 삽입  테마안의 basic 이 아닌 기본그누보드 css에 스타일시트 만들어서 다른 테마에도 사용가능하게 제작 -->
-<link rel="stylesheet" href="<?php echo G5_JS_URL;?>/swiper/swiper.css">
+<link rel="stylesheet" href="<?php echo G5_JS_URL;?>/swiper/swiper.css?ver=<?php echo time();?>">
 <link rel="stylesheet" href="<?php echo G5_CSS_URL ?>/kst.min.css?ver=<?php echo time(); ?>">
 
 <!--[if lte IE 8]>
