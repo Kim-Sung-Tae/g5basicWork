@@ -22,7 +22,8 @@ $(function() {
 
 
 <script src="<?php echo G5_JS_URL?>/kstJS/kst.js?var=<?php echo time(); ?>" defer></script>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?var=<?php echo time(); ?>"></script>
+<script src="<?php echo G5_JS_URL?>/kstJS/jquery.bpopup-0.1.1.min.js?var=<?php echo time(); ?>"></script>
 <?php //run_event('tail_sub'); ?>
 
 </body>

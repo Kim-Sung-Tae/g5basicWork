@@ -53,6 +53,13 @@ include_once(G5_THEME_PATH.'/head.php');
             ?>
     </div>
 
+    <div class ="movie_list">
+        
+          <?php
+                echo latest('main_youtube2', 'main_youtube2', 3, 50);		// 리안헤어 동영상 리스트 
+            ?>
+    </div>
+
     
 
 
