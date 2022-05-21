@@ -35,23 +35,28 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
             
       ?> 
 
-            <div id ="my-button" class ="col-12 col-md-4">
+            <div id ="my-button" class ="col-12 col-md-4 my-button">
               <?php echo $img_content; ?>
               <h3 class="subject_open"><img src="<?php echo G5_IMG_URL; ?>/youtube_riahn_icon.png" alt="no image"><?php echo $list[$i]['wr_content']; ?></h3>
+            
+              <div id="element_to_pop_up" class="element_to_pop_up">
+                    <a class="b-close">닫기</a>
+                    <iframe width="100%" height="720" 
+                    src="https://www.youtube.com/embed/<?php echo $list[$i]['subject'];?>?rel=0&amp;autoplay=1&mute=1&amp;loop=1;playlist=<?php echo $list[$i]['subject'];?>&amp;playlist=<?php echo $list[$i]['subject'];?>&loop=1 " 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                    </iframe>
+             </div>
+
             </div>
 
             
-            <div id="element_to_pop_up">
-                <a class="b-close">닫기</a>
 
-                <iframe width="100%" height="720" 
-                src="https://www.youtube.com/embed/<?php echo $list[$i]['subject'];?>?rel=0&amp;autoplay=1&mute=1&amp;loop=1;playlist=<?php echo $list[$i]['subject'];?>&amp;playlist=<?php echo $list[$i]['subject'];?>&loop=1 " 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-            </div>
+            
+            
+            
 
       <?php }  ?>
         </div>
