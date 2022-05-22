@@ -11,12 +11,12 @@ include_once(G5_THEME_PATH.'/head.php');
 ?>
 
 <!-- 첫번쨰 섹션 슬라이드  캐러셀 가져오는 부분  -->
-<div class="mainSlider  ">
+<div class="mainSlider">
     <?php  echo latest('mainSlider', 'carousel', 3, 200);?>
 </div>
 
     <!-- 가게 소개  -->
-    <div class="open_intro container-lg position-relative mb-5">
+    <div class="open_intro container-lg position-relative mb-5" data-aos="fade-up" data-aos-duration="1500" >
         <?php  echo latest('open_intro', 'open_intro', 10, 200);?>
     </div>
 
@@ -45,20 +45,52 @@ include_once(G5_THEME_PATH.'/head.php');
         </div>
 </div>
 
-
-    <div class="movie">
+    <div class="movie mb-5">
         <h2 class="sound_only">유트브 22년 광고영상</h2>
             <?php
                 echo latest('youtube', 'main_youtube', 2, 50);		// 최소설치시 자동생성되는 갤러리게시판
             ?>
     </div>
-
-    <div class ="movie_list">
-        
+    <div class ="movie_list mb-5">
           <?php
                 echo latest('main_youtube2', 'main_youtube2', 3, 50);		// 리안헤어 동영상 리스트 
             ?>
     </div>
+
+    <div class = "sns_instagram">
+        <div class = "container">
+            <div class ="row">
+                <div class ="sns_left col-12 col-md-4">
+                    <h3 class = "d-flex">
+                        <div>
+                            <img src= "<?php echo G5_IMG_URL;?>/Instagram.png" alt="">
+                        </div>
+                         <p class ="instagram_head">
+                            INSTAGRAM
+                        </p>
+                    </h3>     
+                    <div class ="mt-5 instagram_content">
+                         <p>
+                            @riahn_official
+                         </p>
+                         <p class = "mt-2 C777">
+                            리안헤어 SNS계정을 통해 다양한 소식을 만나보세요!
+                         </p>
+                    </div>
+                  
+                </div>
+
+                <div class ="sns_right col-12 col-md-8 row">
+                    <?php
+                    echo latest('sns_instagram', 'sns_instagram', 6, 50);		// 리안헤어 동영상 리스트 
+                    ?>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
 
     
 
@@ -66,10 +98,5 @@ include_once(G5_THEME_PATH.'/head.php');
     
 
    <script src="/zy/js/kstJS/main.js?ver=<?php echo time(); ?>"></script>
-
-
-
-
-
 <?php
 include_once(G5_THEME_PATH.'/tail.php');

@@ -221,6 +221,14 @@
   min-height: 100vh !important;
 }
 
+.C333 {
+  color: #333;
+}
+
+.C777 {
+  color: #777;
+}
+
 .colorGreen {
   background-color: #2c564e80 !important;
 }
@@ -232,6 +240,10 @@
 .colorGreen #gnb .gnb_1dli.gnb_al_li_plus .gnb_1da {
   color: white;
   font-size: 0.85em;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 li {
@@ -288,6 +300,13 @@ p {
 .subject_open {
   color: #198775;
   font-family: 'GSB';
+}
+
+.subject_youtube {
+  color: #198775;
+  font-family: 'GSB';
+  font-size: 1.5rem;
+  margin: 0 auto;
 }
 
 .topbg {
@@ -393,11 +412,11 @@ p {
   width: 100%;
   background-size: 100%;
   background-image: url(../img/main_youtube_bg.png);
-  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .RIAHN_youtube {
-  font-size: 3rem;
+  font-size: 3.3rem;
 }
 
 #element_to_pop_up {
@@ -416,3 +435,15 @@ p {
   right: 10px;
   top: 5px;
 }
+
+.instagram_head {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 auto;
+}
+
+.instagram_content {
+  font-family: "GSB";
+}
+/*# sourceMappingURL=kst.css.map */

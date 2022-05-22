@@ -63,6 +63,7 @@ if($config['cf_add_meta'])
 <!--   작업자  kst.css 삽입  테마안의 basic 이 아닌 기본그누보드 css에 스타일시트 만들어서 다른 테마에도 사용가능하게 제작 -->
 <link rel="stylesheet" href="<?php echo G5_JS_URL;?>/swiper/swiper.css?ver=<?php echo time();?>">
 <link rel="stylesheet" href="<?php echo G5_CSS_URL ?>/kst.min.css?ver=<?php echo time(); ?>">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <!--[if lte IE 8]>
 <script src="<?php echo G5_JS_URL ?>/html5.js"></script>

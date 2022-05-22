@@ -33,13 +33,13 @@ $(document).ready(function(){
   })(jQuery);
   
   // 팝업창 닫기를 눌렀을때 페이지가 새로 고침 됩니다. 
-  $('.b-close',"b-modal").click(function(){ //동영상닫기
+  $('.b-close').click(function(){ //동영상닫기
     location.reload();
   })
   
 
  
-
+  AOS.init(); // aos 실행문
 
 
 })

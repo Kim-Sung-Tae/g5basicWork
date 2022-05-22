@@ -24,7 +24,7 @@ if (G5_IS_MOBILE) {
             
              <div class ="footer_content row d-flex justify-content-center align-items-center">
                 <div class ="footer_left col-12 col-md-6">
-                    <div class ="footer_info mb-5">
+                    <div class ="footer_info mb-5 text-left">
                         <h3 class ="text-left mb-5">INFORMATION</h3>
                         <?php echo latest('footer_info','footer_info',4,200);?>
                     </div>
