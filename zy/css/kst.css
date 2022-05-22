@@ -277,6 +277,12 @@ p {
   margin: unset;
 }
 
+@media (max-width: 768px) {
+  .open_hover .open_hover_visible {
+    font-size: 1rem !important;
+  }
+}
+
 .open_hover .open_hover_visible {
   opacity: 0;
   top: 30%;

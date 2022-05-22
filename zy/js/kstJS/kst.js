@@ -39,14 +39,6 @@ $(document).ready(function(){
   
   AOS.init(); // aos 실행문
 
-  
-
-  
-     
-
-
-
-
 })
 // window.opener.document.location.href=window.opener.document.URL; self.close();
 

@@ -60,7 +60,7 @@ include_once(G5_THEME_PATH.'/head.php');
     <div class = "sns_instagram">
         <div class = "container">
             <div class ="row">
-                <div class ="sns_left col-12 col-md-4 border">
+                <div class ="sns_left col-12 col-md-4 border``">
                     <h3 class = "d-flex m-4">
                         <div>
                             <img src= "<?php echo G5_IMG_URL;?>/Instagram.png" alt="">
