@@ -28,7 +28,7 @@ include_once(G5_THEME_PATH.'/head.php');
          <div class ="row main_notice_event">
             <div class="swiper mySwiper">
                 <div class="tabstitle px-5"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span></div>
-                  <div class="swiper-wrapper">
+                  <div class="swiper-wrapper" >
                     <div class="swiper-slide slide-bg" data-name="Notice">  
                         <div class ="main_notice">
                             <?php  echo latest('main_notice', 'main_notice', 4, 200);?>   
@@ -60,8 +60,8 @@ include_once(G5_THEME_PATH.'/head.php');
     <div class = "sns_instagram">
         <div class = "container">
             <div class ="row">
-                <div class ="sns_left col-12 col-md-4">
-                    <h3 class = "d-flex">
+                <div class ="sns_left col-12 col-md-4 border">
+                    <h3 class = "d-flex m-4">
                         <div>
                             <img src= "<?php echo G5_IMG_URL;?>/Instagram.png" alt="">
                         </div>

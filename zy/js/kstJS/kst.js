@@ -37,9 +37,14 @@ $(document).ready(function(){
     location.reload();
   })
   
-
- 
   AOS.init(); // aos 실행문
+
+  
+
+  
+     
+
+
 
 
 })

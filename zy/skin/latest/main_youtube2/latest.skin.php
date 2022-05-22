@@ -14,7 +14,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
   
 
     <div class ="container text-center">
-        <p class ="RIAHN_youtube p-5 mb-5"><img src="<?php echo G5_IMG_URL;?>/youtube_icon.png" alt="no image"> <?php echo $bo_subject;?></p>
+        <p class ="RIAHN_youtube p-5 mb-5" data-aos="fade-up" data-aos-duration="1500"><img src="<?php echo G5_IMG_URL;?>/youtube_icon.png" alt="no image"> <?php echo $bo_subject;?></p>
         <div class ="row">
       <?php
           for ($i=0; $i<$list_count; $i++) {
@@ -35,7 +35,7 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
             
       ?> 
 
-            <div id ="my-button" class ="col-12 col-md-4 my-button cursor-pointer">
+            <div id ="my-button" class ="col-12 col-md-4 my-button cursor-pointer" data-aos="fade-up" data-aos-duration="2000">
               <?php echo $img_content; ?>                                                                                                                                                  
               <h3 class="text-md-left d-flex align-items-center">
                   <div>

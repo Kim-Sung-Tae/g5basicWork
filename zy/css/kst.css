@@ -221,6 +221,10 @@
   min-height: 100vh !important;
 }
 
+.margin-right10 {
+  margin-right: 10px !important;
+}
+
 .C333 {
   color: #333;
 }
@@ -445,5 +449,64 @@ p {
 
 .instagram_content {
   font-family: "GSB";
+}
+
+div, ul, li {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.quickmenu {
+  position: fixed;
+  top: 55%;
+  right: 50px;
+  display: block;
+  z-index: 9999;
+}
+
+.quickmenu ul {
+  width: 50px;
+}
+
+.quickmenu ul li {
+  overflow: hidden;
+  width: 100%;
+  float: right;
+  line-height: 4;
+  background-color: #777;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  border-radius: 50px;
+}
+
+.quickmenu ul li a {
+  display: -webkit-inline-box;
+}
+
+.quickmenu ul li:hover {
+  background-color: #198754;
+  width: 150px;
+  line-height: 4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.quickmenu ul li:hover .quick_text {
+  display: block;
+}
+
+.quickmenu .quick_text {
+  display: none;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=kst.css.map */

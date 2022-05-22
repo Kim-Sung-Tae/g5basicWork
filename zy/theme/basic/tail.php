@@ -43,6 +43,16 @@ if (G5_IS_MOBILE) {
     <button type="button" id="top_btn">
     	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
     </button>
+    
+    <div class="quickmenu">
+        <ul>
+            <li><a href="#"> <div><img src="<?php echo G5_IMG_URL; ?>/right_icon1.png"></div>  <div class="margin-right10 quick_text">MCZONE</div> </a></li>
+            <li><a href="#"> <div><img src="<?php echo G5_IMG_URL; ?>/right_icon2.png"></div>  <div class="margin-right10 quick_text">MCMART</div> </a></li>
+            <li><a href="#"> <div><img src="<?php echo G5_IMG_URL; ?>/right_icon3.png"></div>  <div class="margin-right10 quick_text">MCCON</div> </a></li>
+            <li><a href="#"> <div><img src="<?php echo G5_IMG_URL; ?>/right_icon4.png"></div>   <div class="margin-right10 quick_text">가맹문의</div> </a></li>
+        </ul>
+    </div>
+
     <script>
     $(function() {
         $("#top_btn").on("click", function() {
