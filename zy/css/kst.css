@@ -255,6 +255,7 @@ li {
 }
 
 #hd {
+  z-index: 10000;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -321,10 +322,6 @@ p {
 
 .topbg {
   background-color: beige;
-}
-
-.gnb_2da {
-  background-color: steelblue;
 }
 
 .fa + .sound_only {
@@ -514,5 +511,24 @@ a {
 .quickmenu .quick_text {
   display: none;
   white-space: nowrap;
+}
+
+.gnb_2dul {
+  height: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+#gnb #gnb_1dul:hover .gnb_2dul {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: visible;
+  background-color: transparent;
+  height: 220px;
+}
+
+#gnb #gnb_1dul:hover #gnb_1dul {
+  overflow: visible;
 }
 /*# sourceMappingURL=kst.css.map */
