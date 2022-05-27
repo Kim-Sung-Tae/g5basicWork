@@ -249,6 +249,7 @@ li{
 }
 
 #hd{
+   z-index: 10000;
    transition: 0.5s;
 
     #gnb{
@@ -321,10 +322,7 @@ p {
 
 }
 
-.gnb_2da{
-    //  상단 소메뉴 배경 설정
-    background-color:steelblue;
-}
+
 
 .fa + .sound_only{
                    display: block !important;

@@ -10,7 +10,7 @@ if (G5_IS_MOBILE) {
 include_once(G5_THEME_PATH.'/head.php');
 ?>
 
-<!-- 첫번쨰 섹션 슬라이드  캐러셀 가져오는 부분  -->
+<!-- 첫번쨰 섹션 슬라이드  캐러셀 가져오는 부분  --> 
 <div class="mainSlider">
     <?php  echo latest('mainSlider', 'carousel', 3, 200);?>
 </div>

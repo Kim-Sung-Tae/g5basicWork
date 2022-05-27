@@ -255,6 +255,7 @@ li {
 }
 
 #hd {
+  z-index: 10000;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -321,10 +322,6 @@ p {
 
 .topbg {
   background-color: beige;
-}
-
-.gnb_2da {
-  background-color: steelblue;
 }
 
 .fa + .sound_only {
@@ -515,4 +512,3 @@ a {
   display: none;
   white-space: nowrap;
 }
-/*# sourceMappingURL=kst.css.map */
