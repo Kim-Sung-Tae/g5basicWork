@@ -178,7 +178,7 @@ a.gnb_2da:hover {color:#48e391;}
 -moz-box-shadow:0 2px 5px rgba(0,0,0,0.2);
 box-shadow:0 2px 5px rgba(0,0,0,0.2)}
 #gnb_all h2 {font-size:1.3em;padding:15px 20px;border-bottom:1px solid #e7eeef}
-#gnb_all .gnb_al_ul:after {display:block;visibility:hidden;clear:both;content:""}
+#gnb_all .gnb_al_ul:after {}
 #gnb_all .gnb_al_ul > li:nth-child(5n+1) {border-left:0}
 #gnb_all .gnb_al_li {float:left;width:20%;min-height:150px;padding:20px;border-left:1px solid #e7eeef}
 #gnb_all .gnb_al_li .gnb_al_a {font-size:1.2em;display:block;position:relative;margin-bottom:10px;font-weight:bold;color:#3a8afd}
